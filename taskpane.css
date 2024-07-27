@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI';
-    background-color: white;
+    background-color: rgb(200,200,200);
 }
 
 textarea {
@@ -28,7 +28,7 @@ textarea {
     height: 40px;
     width: 40px;
     border: none;
-    background-color: white;
+    background-color: rgb(200,200,200);
     position: absolute;
     right: 1px;
 }
@@ -38,6 +38,7 @@ textarea {
 }
 
 .promptandsend {
+    background-color: rgb(200,200,200);
     margin-top: 10px;
     border: 3px solid rgb(124, 154, 168);
     border-radius: 8px;
@@ -71,9 +72,14 @@ textarea {
     display: none;
 }
 
-.userMessage {
-    background-color: aliceblue;
+.userMessageShow {
+    background-color: white;
+    border: 2px solid rgb(20, 80, 45);
     border-radius: 6px;
+    padding-left: 8px;
+    padding-right: 3px;
+    padding-bottom: 8px;
+    padding-top: 8px;
 }
 
 .output {
@@ -83,20 +89,30 @@ textarea {
     padding-top: 30px;
 }
 
-@keyframes outputAnimation {
+@keyframes showAnimation {
     0% {
         opacity: 0;
         padding-top: 50px;
     }
     100% {
         opacity: 1;
-        padding-top: 0px;
+        padding-top: 8px;
     }
 }
 
-.outputAnm {
-    animation-name: outputAnimation;
+.showAnm {
+    animation-name: showAnimation;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
+}
+
+.outputText {
+    max-width: 90%;
+    background-color: white;
+    border-color: rgb(100,100,200);
+    border: 2px solid rgb(100,100,200);
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-right: 3px;
 }
