@@ -1,4 +1,3 @@
-
 import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
 import MarkdownIt from 'markdown-it';
 
@@ -62,6 +61,8 @@ edit.onclick = () =>{
 submit.onclick = async (ev) => {
   ev.preventDefault();
   output.innerHTML = 'Generating...';
+  userMessage.classList.add('userMessageShow');
+  userMessage.classList.add('showAnm');
   userMessage.innerHTML = 'User: ' + promptInput.value;
   output.classList.remove('outputAnm');
   
@@ -114,9 +115,7 @@ submit.onclick = async (ev) => {
     for await (let response of result.stream) {
       buffer.push(response.text());
       out = md.render(buffer.join(''));
-      output.innerHTML = '<p class=\"outputText\">' + out + '</p>';
-      output.classList.add('outputAnm');
-      output.classList.remove('output');
+      addUserMessage(out);
       window.scrollTo(0, document.body.scrollHeight);
       promptInput.value = '';
     }
@@ -125,6 +124,13 @@ submit.onclick = async (ev) => {
   }
   run();
 };
+
+function addUserMessage(msg){
+  output.innerHTML = '<p>' + msg + '</p>';
+  output.classList.remove('output');
+  output.classList.add('outputText');
+  output.classList.add('showAnm');
+}
 
 function removeT(text) {
   // Remove text in the format of '<...>' and '<.../>'
