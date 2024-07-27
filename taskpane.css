@@ -1,0 +1,102 @@
+body {
+    font-family: 'Segoe UI';
+    background-color: white;
+}
+
+textarea {
+    border: 0;
+    border-radius: 10px;
+    font-family: 'Segoe UI';
+    left: 10px;
+}
+
+.sug {
+    height: 40px;
+    width: 97%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(124, 154, 168);
+    background-color: aliceblue;
+}
+
+.sug:hover {
+    background-color: rgb(124, 154, 168);
+}
+
+.submit {
+    height: 40px;
+    width: 40px;
+    border: none;
+    background-color: white;
+    position: absolute;
+    right: 1px;
+}
+
+.submit:hover {
+    background-color: whitesmoke;
+}
+
+.promptandsend {
+    margin-top: 10px;
+    border: 3px solid rgb(124, 154, 168);
+    border-radius: 8px;
+    position: relative;
+    height: 202px;
+}
+
+.length {
+    margin-top: 10px;
+}
+
+.loading {
+    color: rgb(180, 180, 180);
+}
+
+.edit {
+    height: 30px;
+    width: 100%;
+    background-color:cornflowerblue;
+    border: none;
+    border-radius: 6px;
+    display: none;
+}
+
+.edit:hover {
+    background-color: rgb(75, 124, 212);
+}
+
+.editp {
+    font-size: 11.5px;
+    display: none;
+}
+
+.userMessage {
+    background-color: aliceblue;
+    border-radius: 6px;
+}
+
+.output {
+    color: white;
+    background-color: rgb(92, 92, 241);
+    opacity: 0;
+    padding-top: 30px;
+}
+
+@keyframes outputAnimation {
+    0% {
+        opacity: 0;
+        padding-top: 50px;
+    }
+    100% {
+        opacity: 1;
+        padding-top: 0px;
+    }
+}
+
+.outputAnm {
+    animation-name: outputAnimation;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
