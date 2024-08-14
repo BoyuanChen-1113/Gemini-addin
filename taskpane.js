@@ -1,6 +1,3 @@
-import { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
-import MarkdownIt from 'markdown-it';
-
 Office.onReady((info) => {
   if (info.host === Office.HostType.Word) {
     
