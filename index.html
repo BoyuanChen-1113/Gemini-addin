@@ -1,0 +1,47 @@
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chat with Gemini</title>
+
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- For more information on Fluent UI, visit https://developer.microsoft.com/fluentui#/. -->
+    <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/11.0.0/css/fabric.min.css"/>
+
+    <!-- Template styles -->
+    <link href="taskpane.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <h2>Chat with Gemini</h2>
+    <div class="suggestions">
+      <button class="sug suggestion1">What will the world look like in 2050?</button>
+      <button class="sug suggestion2">What is the impact of social media on mental health?</button>
+      <button class="sug suggestion3">What are the risks and rewards of investing in cryptocurrencies?</button>
+    </div>
+    <div class="prompt-box">
+      <div class="promptandsend">
+      <textarea name="prompt" cols="43" rows="9" placeholder="Ask whatever you want..." style="background-color: rgb(200,200,200);border:none;"></textarea>
+      <br/><button class="submit"><img src="send.png" alt="send"></button><br>
+      </div>
+      <label>Length(words)</label>
+      <input type="text" class="length" placeholder="Set length"></input>
+    </div>
+  <p class="loading">Results will appear here...</p>
+  <button class="edit">Edit</button>
+  <p class="editp">↑ Enter in the textbox if you want to edit your article.</p>
+  <hr/>
+  <p class="userMessage"></p>
+  <p class="output"></p>
+  <p style="font-size: 10px;">Ai generated content may be inaccurate, so double check your article before saving.</p>
+  <p id="exp"></p>
+</body>
+
+</html>
