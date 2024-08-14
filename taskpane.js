@@ -5,7 +5,7 @@ Office.onReady((info) => {
 });
 
 // Api KEY
-let API_KEY = 'AIzaSyD8IWCVHh3DMxPcN0BjKG-rpXXnIFlll2s';
+let API_KEY = '';
 
 // html
 let submit = document.querySelector('.submit');
